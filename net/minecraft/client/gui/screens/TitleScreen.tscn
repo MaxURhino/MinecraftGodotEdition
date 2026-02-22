@@ -17,6 +17,34 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_up1g8")
 
+[node name="LogoRenderer" parent="." unique_id=2100896679 instance=ExtResource("2_up1g8")]
+layout_mode = 1
+offset_left = -224.99997
+offset_top = 33.0
+offset_right = 799.0
+offset_bottom = 289.0
+
+[node name="SplashText" parent="LogoRenderer" unique_id=1888026963 instance=ExtResource("4_eqeru")]
+modulate = Color(1, 1, 0, 1)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -46.727478
+offset_top = -151.45457
+offset_right = -6.727417
+offset_bottom = -111.454575
+grow_horizontal = 0
+grow_vertical = 0
+rotation = -0.43633232
+scale = Vector2(5, 5)
+Text = "Splash Text!"
+DrawByDefault = true
+Centered = true
+
 [node name="Menu" type="Control" parent="." unique_id=2013550979]
 layout_mode = 1
 anchors_preset = 15
@@ -24,13 +52,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="LogoRenderer" parent="Menu" unique_id=2100896679 instance=ExtResource("2_up1g8")]
-layout_mode = 1
-offset_left = -224.99997
-offset_top = 33.0
-offset_right = 799.0
-offset_bottom = 289.0
 
 [node name="SingleplayerButton" parent="Menu" unique_id=2048548975 instance=ExtResource("3_ktjp8")]
 layout_mode = 1
@@ -146,7 +167,7 @@ grow_vertical = 2
 scale = Vector2(2, 2)
 IconTexture = ExtResource("5_qyjxv")
 
-[node name="CopyrightText" parent="Menu" unique_id=1888026963 instance=ExtResource("4_eqeru")]
+[node name="CopyrightText" parent="Menu" unique_id=1992854388 instance=ExtResource("4_eqeru")]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0

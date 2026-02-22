@@ -33,10 +33,6 @@ public partial class SplashRenderer : ColorRect
 		}
 		else
 		{
-			if (!_processEnded)
-			{
-				GD.Print("Process Ended!");
-			}
 			_processEnded = true;
 			if (_processEnded)
 			{

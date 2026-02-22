@@ -7,6 +7,7 @@ public partial class TextComponent : Control
 {
 	[Export] public string Text = "Hello";
 	[Export] public bool DrawByDefault;
+	[Export] public bool Centered;
 	[Export] public bool Underlined;
 	[Export] public bool IsButton;
 	private bool _isBeingUnderlined;
@@ -31,7 +32,13 @@ public partial class TextComponent : Control
 		_isBeingUnderlined = Underlined;
 		if (DrawByDefault)
 		{
-			_CreateLabel(0, 0);
+			if (Centered)
+			{
+				_CreateLabel(-(_GetWidth() / 2), 0);
+			} else
+			{
+				_CreateLabel(0, 0);
+			}
 		}
 
 		MouseEntered += () =>

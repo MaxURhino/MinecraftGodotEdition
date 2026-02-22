@@ -18,13 +18,6 @@ public partial class SelectWorldScreen : Screen
 
 	public override void _OnClose()
 	{
-		var expression = new Expression();
-		var error = expression.Parse("get_tree().change_scene_to_file(\"res://net/minecraft/client/gui/screens/TitleScreen.tscn\")");
-		if (error != Error.Ok)
-		{
-			GD.PrintErr(expression.GetErrorText());
-			return;
-		}
-		expression.Execute([], this);
+		Minecraft.ExecuteOn("get_tree().change_scene_to_file(\"res://net/minecraft/client/gui/screens/TitleScreen.tscn\")", this);
 	}
 }

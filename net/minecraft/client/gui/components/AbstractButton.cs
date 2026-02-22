@@ -36,14 +36,7 @@ public partial class AbstractButton : Button
 		Pressed += () =>
 		{
 			SoundEvent.PlaySound("random/click");
-			var expression = new Expression();
-			var error = expression.Parse(OnPress);
-			if (error != Error.Ok)
-			{
-				GD.PrintErr(expression.GetErrorText());
-				return;
-			}
-			expression.Execute([], this);
+			Minecraft.ExecuteOn(OnPress, this);
 		};
 
 		if (IconTexture != null)
