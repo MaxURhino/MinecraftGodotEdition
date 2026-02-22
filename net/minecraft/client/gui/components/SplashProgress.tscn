@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bofl16ixh051t"]
+
+[ext_resource type="Script" uid="uid://83inraaqrfyk" path="res://net/minecraft/client/gui/components/SplashProgress.cs" id="1_63yx8"]
+
+[node name="SplashProgress" type="Control" unique_id=1503548610]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_63yx8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=182941191]
+layout_mode = 0
+offset_left = -65.0
+offset_top = -4.0
+offset_right = -64.0
+offset_bottom = 4.0
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=530159781]
+layout_mode = 0
+offset_left = 64.0
+offset_top = -4.0
+offset_right = 65.0
+offset_bottom = 4.0
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=2040084890]
+layout_mode = 0
+offset_left = -64.0
+offset_top = -4.0
+offset_right = 64.0
+offset_bottom = -3.0
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=71069095]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 3.0
+offset_right = 64.0
+offset_bottom = 4.0
+
+[node name="Slider" type="ColorRect" parent="." unique_id=1598087613]
+layout_mode = 0
+offset_left = -64.0
+offset_top = -3.0
+offset_right = -24.0
+offset_bottom = 3.0

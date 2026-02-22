@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://b7lm5l3hb5muq"]
+
+[ext_resource type="Script" uid="uid://bg5mk3l2q0eig" path="res://net/minecraft/client/gui/components/text/TextComponent.cs" id="1_sbeae"]
+[ext_resource type="SpriteFrames" uid="uid://vip8olxqffik" path="res://net/minecraft/client/gui/components/text/ASCIIText.tres" id="2_sbeae"]
+
+[node name="Text" type="Control" unique_id=1888026963]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+script = ExtResource("1_sbeae")
+
+[node name="TestCharacter" type="AnimatedSprite2D" parent="." unique_id=1623095116]
+visible = false
+position = Vector2(20, 20)
+sprite_frames = ExtResource("2_sbeae")
+frame = 65
+
+[node name="Underline" type="ColorRect" parent="." unique_id=1189102042]
+visible = false
+z_index = 4096
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 1.0
+
+[node name="UnderlineShadow" type="ColorRect" parent="." unique_id=1801648859]
+visible = false
+z_index = 4096
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 21.0
+offset_bottom = 2.0
+color = Color(0.24705882, 0.24705882, 0.24705882, 1)

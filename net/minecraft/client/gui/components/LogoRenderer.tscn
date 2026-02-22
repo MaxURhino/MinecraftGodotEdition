@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cqpxjvlt2ncdj"]
+
+[ext_resource type="Texture2D" uid="uid://cq435atyxmynv" path="res://assets/minecraft/textures/gui/title/minecraft.png" id="1_4m71j"]
+[ext_resource type="Script" uid="uid://dxjbi72fiq38e" path="res://net/minecraft/client/gui/components/LogoRenderer.cs" id="2_2leu6"]
+[ext_resource type="Texture2D" uid="uid://c6enli37ler4o" path="res://assets/minecraft/textures/gui/title/edition.png" id="3_2leu6"]
+
+[node name="LogoRenderer" type="TextureRect" unique_id=2100896679]
+texture_filter = 2
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -228.0
+offset_top = 44.0
+offset_right = 796.0
+offset_bottom = 300.0
+grow_horizontal = 2
+scale = Vector2(0.44000003, 0.44000003)
+texture = ExtResource("1_4m71j")
+script = ExtResource("2_2leu6")
+
+[node name="Edition" type="TextureRect" parent="." unique_id=1772814988]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -317.0
+offset_top = 141.66666
+offset_right = 195.0
+offset_bottom = 205.66666
+grow_horizontal = 2
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("3_2leu6")

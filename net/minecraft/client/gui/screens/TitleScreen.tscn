@@ -1,0 +1,173 @@
+[gd_scene format=3 uid="uid://ikpxvqnfjvoy"]
+
+[ext_resource type="Script" uid="uid://b0lekokvjrotm" path="res://net/minecraft/client/gui/screens/TitleScreen.cs" id="1_up1g8"]
+[ext_resource type="PackedScene" uid="uid://cqpxjvlt2ncdj" path="res://net/minecraft/client/gui/components/LogoRenderer.tscn" id="2_up1g8"]
+[ext_resource type="PackedScene" uid="uid://cualymgkmc5dl" path="res://net/minecraft/client/gui/components/AbstractButton.tscn" id="3_ktjp8"]
+[ext_resource type="Texture2D" uid="uid://di5yfb5yxq43a" path="res://assets/minecraft/textures/gui/sprites/icon/accessibility.png" id="4_d3hu8"]
+[ext_resource type="PackedScene" uid="uid://b7lm5l3hb5muq" path="res://net/minecraft/client/gui/components/text/TextComponent.tscn" id="4_eqeru"]
+[ext_resource type="Texture2D" uid="uid://c1ya8wuutvicq" path="res://assets/minecraft/textures/gui/sprites/icon/language.png" id="5_qyjxv"]
+[ext_resource type="PackedScene" uid="uid://4wag28rnt4sn" path="res://net/minecraft/client/gui/components/SplashRenderer.tscn" id="7_vgxmj"]
+
+[node name="Screen" type="Control" unique_id=1212588017]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_up1g8")
+
+[node name="LogoRenderer" parent="." unique_id=2100896679 instance=ExtResource("2_up1g8")]
+layout_mode = 1
+offset_left = -222.0
+offset_right = 802.0
+
+[node name="SingleplayerButton" parent="." unique_id=2048548975 instance=ExtResource("3_ktjp8")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = -34.0
+offset_right = 4.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+LabelText = "Singleplayer"
+OnPress = "get_tree().change_scene_to_file(\"res://net/minecraft/client/gui/screens/worldselection/SelectWorldScreen.tscn\")"
+
+[node name="MultiplayerButton" parent="." unique_id=1785865087 instance=ExtResource("3_ktjp8")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = 12.0
+offset_right = 4.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+LabelText = "Multiplayer"
+
+[node name="RealmsButton" parent="." unique_id=1574923820 instance=ExtResource("3_ktjp8")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = 58.0
+offset_right = 4.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+LabelText = "Minecraft Realms"
+
+[node name="OptionsButton" parent="." unique_id=1198915109 instance=ExtResource("3_ktjp8")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = 111.0
+offset_right = -98.0
+offset_bottom = 131.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+LabelText = "Options..."
+
+[node name="QuitButton" parent="." unique_id=943381454 instance=ExtResource("3_ktjp8")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 8.0
+offset_top = 111.0
+offset_right = 106.0
+offset_bottom = 131.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+LabelText = "Quit Game"
+OnPress = "get_tree().quit(0)"
+
+[node name="AccesibilityButton" parent="." unique_id=297474374 instance=ExtResource("3_ktjp8")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 210.0
+offset_top = 111.0
+offset_right = 230.0
+offset_bottom = 131.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+IconTexture = ExtResource("4_d3hu8")
+
+[node name="LanguageButton" parent="." unique_id=1071221645 instance=ExtResource("3_ktjp8")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -241.0
+offset_top = 111.0
+offset_right = -221.0
+offset_bottom = 131.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+IconTexture = ExtResource("5_qyjxv")
+
+[node name="CopyrightText" parent="." unique_id=1888026963 instance=ExtResource("4_eqeru")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -399.0
+offset_top = -19.0
+offset_right = -359.0
+offset_bottom = 21.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(2, 2)
+mouse_default_cursor_shape = 2
+Text = "Copyright Mojang AB. Do not distribute!"
+DrawByDefault = true
+IsButton = true
+
+[node name="VersionText" parent="." unique_id=677760607 instance=ExtResource("4_eqeru")]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -19.0
+offset_right = 45.0
+offset_bottom = 21.0
+grow_vertical = 0
+scale = Vector2(2, 2)
+Text = "Minecraft 1.21.11"
+DrawByDefault = true
+
+[node name="SplashRenderer" parent="." unique_id=223117807 instance=ExtResource("7_vgxmj")]
+layout_mode = 1

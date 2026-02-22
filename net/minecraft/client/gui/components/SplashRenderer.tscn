@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://4wag28rnt4sn"]
+
+[ext_resource type="Texture2D" uid="uid://d3c6yyrhs0hwl" path="res://assets/minecraft/textures/gui/title/mojangstudios.png" id="1_4cyv2"]
+[ext_resource type="Script" uid="uid://dp4es1ggbw2cn" path="res://net/minecraft/client/gui/components/SplashRenderer.cs" id="1_5xya6"]
+[ext_resource type="PackedScene" uid="uid://bofl16ixh051t" path="res://net/minecraft/client/gui/components/SplashProgress.tscn" id="2_u8hca"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hgou1"]
+atlas = ExtResource("1_4cyv2")
+region = Rect2(0, 0, 512, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnln2"]
+atlas = ExtResource("1_4cyv2")
+region = Rect2(0, 256, 512, 256)
+
+[node name="SplashRenderer" type="ColorRect" unique_id=223117807]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9372549, 0.19607843, 0.23921569, 1)
+script = ExtResource("1_5xya6")
+
+[node name="Splash" type="Control" parent="." unique_id=717404561]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(1886, 214)
+
+[node name="TextureRect" type="TextureRect" parent="Splash" unique_id=870180242]
+texture_filter = 2
+layout_mode = 0
+offset_left = -2342.0
+offset_top = -342.0
+offset_right = -1830.0
+offset_bottom = -86.0
+texture = SubResource("AtlasTexture_hgou1")
+
+[node name="TextureRect2" type="TextureRect" parent="Splash" unique_id=27891483]
+texture_filter = 2
+layout_mode = 0
+offset_left = -1830.3333
+offset_top = -342.0
+offset_right = -1318.3333
+offset_bottom = -86.0
+texture = SubResource("AtlasTexture_pnln2")
+
+[node name="SplashProgress" parent="." unique_id=1503548610 instance=ExtResource("2_u8hca")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 78.0
+offset_bottom = 78.0
+scale = Vector2(3, 3)

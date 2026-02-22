@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://clwu104c7fx7q"]
+
+[ext_resource type="Script" uid="uid://bnusff20fmy28" path="res://net/minecraft/client/gui/screens/worldselection/SelectWorldScreen.cs" id="1_1wwsq"]
+
+[node name="Screen" type="Control" unique_id=1856529143]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1wwsq")

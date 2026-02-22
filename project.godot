@@ -1,0 +1,53 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Minecraft: Godot Edition"
+run/main_scene="uid://ikpxvqnfjvoy"
+config/features=PackedStringArray("4.6", "C#", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
+config/icon="uid://c4fytf6247pyv"
+
+[autoload]
+
+SoundEvent="*uid://7jbajrpvcsnd"
+
+[display]
+
+window/size/viewport_width=854
+window/size/viewport_height=480
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[dotnet]
+
+project/assembly_name="Minecraft- Godot Edition"
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "red",
+"res://assets/minecraft/icons/": "green",
+"res://assets/minecraft/models/": "gray",
+"res://assets/minecraft/sounds/": "purple",
+"res://assets/minecraft/textures/": "yellow",
+"res://net/": "blue"
+}
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+rendering_device/driver.windows="d3d12"

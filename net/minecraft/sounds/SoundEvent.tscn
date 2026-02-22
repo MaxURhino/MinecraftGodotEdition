@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://7jbajrpvcsnd"]
+
+[ext_resource type="Script" uid="uid://di4wm7l67p3uj" path="res://net/minecraft/sounds/SoundEvent.cs" id="1_3205y"]
+
+[node name="Node" type="Node" unique_id=1189774759]
+script = ExtResource("1_3205y")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=411878357]

@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cualymgkmc5dl"]
+
+[ext_resource type="Texture2D" uid="uid://ch1sy4vpefviu" path="res://assets/minecraft/textures/gui/sprites/widget/button.png" id="1_74w0g"]
+[ext_resource type="Script" uid="uid://b6j0dk4uwvrwh" path="res://net/minecraft/client/gui/components/AbstractButton.cs" id="1_ayrot"]
+[ext_resource type="PackedScene" uid="uid://b7lm5l3hb5muq" path="res://net/minecraft/client/gui/components/text/TextComponent.tscn" id="3_k3m7m"]
+
+[node name="Button" type="Button" unique_id=2048548975]
+offset_left = -100.0
+offset_top = -20.0
+offset_right = 100.0
+mouse_default_cursor_shape = 2
+flat = true
+script = ExtResource("1_ayrot")
+OnPress = "DoNothing()"
+
+[node name="Texture" type="NinePatchRect" parent="." unique_id=1164819379]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 20.0
+texture = ExtResource("1_74w0g")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Label" parent="." unique_id=1888026963 instance=ExtResource("3_k3m7m")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_right = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
