@@ -1,13 +1,50 @@
 [gd_scene format=3 uid="uid://dje5l575hyjuk"]
 
+[ext_resource type="Script" uid="uid://shv2hu31ixuw" path="res://net/minecraft/world/entity/player/Player.cs" id="1_e1cg8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_e1cg8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e1cg8"]
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_keh4d"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e1cg8"]
 
 [node name="Level" type="Node3D" unique_id=588491800]
 
 [node name="GridMap" type="GridMap" parent="." unique_id=1409885837]
 
-[node name="Player" type="MeshInstance3D" parent="." unique_id=2131933904]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1770918372]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.347)
+
+[node name="Cube" type="MeshInstance3D" parent="StaticBody3D" unique_id=1300700862]
+mesh = SubResource("BoxMesh_e1cg8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=65991700]
+shape = SubResource("BoxShape3D_e1cg8")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1871432812]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, -1, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="StaticBody3D2" unique_id=1598194892]
+mesh = SubResource("BoxMesh_e1cg8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=1918070703]
+shape = SubResource("BoxShape3D_e1cg8")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=226333916]
+transform = Transform3D(1, 0, 0, 0, 0.5697099, 0.8218458, 0, -0.8218458, 0.5697099, 0, 7.8848667, -3.7161393)
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=1487694927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+script = ExtResource("1_e1cg8")
+
+[node name="Model" type="MeshInstance3D" parent="Player" unique_id=2131933904]
 mesh = SubResource("CapsuleMesh_keh4d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=123339071]
+shape = SubResource("CapsuleShape3D_e1cg8")
 
 [node name="Camera3D" type="Camera3D" parent="Player" unique_id=975350908]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5218367, -0.47674406)
+fov = 70.0

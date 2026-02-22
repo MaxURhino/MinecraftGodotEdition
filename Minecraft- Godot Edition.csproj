@@ -5,4 +5,7 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>MinecraftGodotEdition</RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="net\minecraft\world\entity\player\" />
+  </ItemGroup>
 </Project>

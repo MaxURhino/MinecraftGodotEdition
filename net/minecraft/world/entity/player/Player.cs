@@ -3,15 +3,43 @@ using System;
 
 namespace MinecraftGodotEdition.net.minecraft.world.entity.player;
 
-public partial class Player : MeshInstance3D
+public partial class Player : CharacterBody3D
 {
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-	}
+	public const float Speed = 5.0f;
+	public const float JumpVelocity = 4.5f;
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+	public override void _PhysicsProcess(double delta)
 	{
+		var velocity = Velocity;
+
+		// Add the gravity.
+		if (!IsOnFloor())
+		{
+			velocity += GetGravity() * (float)delta;
+		}
+
+		// Handle Jump.
+		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
+		{
+			velocity.Y = JumpVelocity;
+		}
+
+		// Get the input direction and handle the movement/deceleration.
+		// As good practice, you should replace UI actions with custom gameplay actions.
+		var inputDir = Input.GetVector("WalkLeft", "WalkRight", "WalkForward", "WalkBackward");
+		var direction = (Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
+		if (direction != Vector3.Zero)
+		{
+			velocity.X = direction.X * Speed;
+			velocity.Z = direction.Z * Speed;
+		}
+		else
+		{
+			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
+			velocity.Z = Mathf.MoveToward(Velocity.Z, 0, Speed);
+		}
+
+		Velocity = velocity;
+		MoveAndSlide();
 	}
 }

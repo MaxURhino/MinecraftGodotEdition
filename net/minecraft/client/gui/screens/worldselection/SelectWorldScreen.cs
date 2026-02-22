@@ -9,6 +9,7 @@ public partial class SelectWorldScreen : Screen
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		Minecraft.ExecuteOn("get_tree().change_scene_to_file(\"res://net/minecraft/world/level/Level.tscn\")", this);
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
