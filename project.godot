@@ -20,6 +20,7 @@ config/icon="uid://c4fytf6247pyv"
 [autoload]
 
 SoundEvent="*uid://7jbajrpvcsnd"
+Minecraft="*uid://brwpmhls6exnn"
 
 [display]
 

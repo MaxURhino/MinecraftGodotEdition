@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://brwpmhls6exnn"]
+
+[ext_resource type="Script" uid="uid://bq2af8xkkvwej" path="res://net/minecraft/Minecraft.cs" id="1_8obl4"]
+
+[node name="Minecraft" type="Node" unique_id=1459221711]
+script = ExtResource("1_8obl4")
